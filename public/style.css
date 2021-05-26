@@ -1,0 +1,41 @@
+body {
+  background-image: url('./banner-1.jpg');
+  background-color: rgba(255, 255, 255, 0.3);
+  background-blend-mode: lighten;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-attachment: fixed;
+}
+
+#kpc {
+  width: 500px;
+  height: 400px;
+  float: right;
+}
+
+li a {
+  margin-left: 15px;
+}
+
+#buto {
+  margin-left: 240px;
+}
+
+footer {
+  margin-top: 60px;
+}
+
+#sign {
+  margin-left: 370px;
+  color: rgba(98, 0, 255, 0.911);
+}
+
+#log {
+  margin-left: 280px;
+  margin-top: 9px;
+  color: rgba(98, 0, 255, 0.911);
+}
+#vedio {
+  margin-left: 130px;
+}

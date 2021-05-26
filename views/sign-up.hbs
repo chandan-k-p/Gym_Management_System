@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <style>
+
+
+  </style>
+</head>
+
+<body>
+  <div class="container-fliud">
+    <div class="row mt-5">
+      <div class="col-sm-7 mx-auto">
+        <div class="card card-body text-center bg-light ">
+          <h1>SignUp</h1>
+          {{#if message}}
+          <h5 class="alert alert-danger mt-2">{{message}}</h5>
+          {{/if}}
+
+          <form action="/signup" method="POST">
+            <div class="form-group mt-3">
+              <div class="input-group">
+                <input type="text" placeholder="First-Name" name="name" class="form-control">
+              </div>
+            </div>
+            <div class="form-group mt-3">
+              <div class="input-group">
+                <input type="text" placeholder="Last-Name" name="name2" class="form-control">
+              </div>
+            </div>
+            <div class="form-group mt-3">
+              <div class="input-group">
+                <input type="email" placeholder="email" name="email" class="form-control">
+              </div>
+            </div>
+
+            <div class="form-group mt-3">
+              <div class="input-group">
+                <input type="number" placeholder="mobile number" name="phnumber" class="form-control">
+              </div>
+            </div>
+
+            <div class="form-group mt-3">
+              <div class="input-group">
+                <input type="password" placeholder="Password" name="password" class="form-control">
+              </div>
+            </div>
+            <div class="form-group mt-3">
+              <div class="input-group">
+                <input type="password" placeholder="Confirm Password" name="confirmPassword" class="form-control">
+              </div>
+            </div>
+            <button type="submit" class="btn btn-success  mt-2 pt-2">Submit</button>
+          </form>
+
+          <h5 class="mt-3 ">Already have an account.....?</h5><a href="/login">LogIn</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

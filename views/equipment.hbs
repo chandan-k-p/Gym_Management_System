@@ -1,0 +1,42 @@
+<body class="bg-light">
+    {{> nav}}
+
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header text-center text-primary">
+                <h4>Equipment List</h4>
+            </div>
+            <div class="card-body">
+                <table class="table table-striped  mt-2">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th> Id </th>
+                            <th> Name</th>
+                            <th>Number</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each userData}}
+                        <tr>
+                            <td>{{id}}</td>
+                            <td>{{name}}</td>
+                            <td>{{number}}</td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+
+
+                </table>
+
+
+
+            </div>
+            <div class="card-footer">
+                Notice :- <i>Please donot break any of material, use how many times you want.</i>
+            </div>
+
+
+        </div>
+    </div>
+    {{> footer}}
+</body>

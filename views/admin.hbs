@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{pageTitle}}</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+
+</head>
+
+<body class="border">
+  <h1 class="mt-5 text-center text-info border">admin page</h1>
+  {{#if message}}
+  <h4 class="alert alert-danger mt-2 text-center">{{message}}</h4>
+  {{/if}}
+  <div class="conatiner">
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="card card-body mt-5">
+          <h1 class="text-success text-center">Trainers</h1>
+
+          <form action="/trAdd" method="POST">
+            <div class="form-group">
+              <div class="input-group">
+                <input type="text" placeholder=" NAME" class="form-control" name="name">
+                <input type="text" placeholder=" EMAIL" class="form-control" name="email">
+                <input type="text" placeholder=" MOBILE-no" class="form-control" name="mobileNo">
+                <button type="submit" class="btn btn-primary">ADD</button>
+              </div>
+            </div>
+          </form>
+          <form action="/trupdate" method="POST">
+            <div class="form-group">
+              <div class="input-group">
+                <input type="text" placeholder=" NAME" class="form-control" name="name">
+                <input type="text" placeholder=" EMAIL" class="form-control" name="email">
+                <input type="text" placeholder=" MOBILE-no" class="form-control" name="mobileNo">
+                <button type="submit" class="btn btn-primary">Update</button>
+              </div>
+            </div>
+          </form>
+          <form action="/trdelete" method="POST">
+            <div class="form-group">
+              <div class="input-group">
+
+                <input type="email" placeholder=" EMAIL" class="form-control" name='email'>
+
+                <button type="submit" class="btn btn-primary">Delete</button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+      </div>
+      <div class="col-sm-4">
+
+        <div class="card card-body mt-5  ">
+          <h1 class="text-success text-center">Equipment</h1>
+
+          <form action="/equipAdd" method="POST">
+            <div class="form-group">
+              <div class="input-group">
+                <input type="text" placeholder=" NAME" class="form-control" name="name">
+                <input type="number" placeholder="Number of Materials Present" class="form-control" name="number">
+
+                <button type="submit" class="btn btn-primary">ADD</button>
+              </div>
+            </div>
+          </form>
+          <form action="/equipupdate" method="POST">
+            <div class="form-group">
+              <div class="input-group">
+                <input type="text" placeholder=" NAME" class="form-control" name="name">
+                <input type="number" placeholder="Number of Materials" class="form-control" name="number">
+
+                <button type="submit" class="btn btn-primary">Update</button>
+              </div>
+            </div>
+          </form>
+          <form action="/equipdelete" method="POST">
+            <div class="form-group">
+              <div class="input-group">
+
+                <input type="text" placeholder="Name" class="form-control" name="name">
+
+                <button type="submit" class="btn btn-primary">Delete</button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+
+      </div>
+      <div class="col-sm-4">
+        <div class="card card-body mt-5 ">
+          <h1 class="text-success text-center">Member</h1>
+
+          <form action="/memAdd" method="POST">
+            <div class="form-group">
+              <div class="input-group">
+                <input type="text" placeholder=" NAME" class="form-control" name="name">
+                <input type="text" placeholder=" EMAIL" class="form-control" name="email">
+                <input type="text" placeholder=" MOBILE-no" class="form-control" name="mobileNo">
+                <button type="submit" class="btn btn-primary">ADD</button>
+              </div>
+            </div>
+          </form>
+          <form action="/memUpdate" method="POST">
+            <div class="form-group">
+              <div class="input-group">
+                <input type="text" placeholder=" NAME" class="form-control" name="name">
+                <input type="text" placeholder=" EMAIL" class="form-control" name="email">
+                <input type="text" placeholder=" MOBILE-no" class="form-control" name="mobileNo">
+                <button type="submit" class="btn btn-primary">Update</button>
+              </div>
+            </div>
+          </form>
+          <form action="/memdelete" method="POST">
+            <div class="form-group">
+              <div class="input-group">
+
+                <input type="email" placeholder=" EMAIL" class="form-control" name='email'>
+
+                <button type="submit" class="btn btn-primary">Delete</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <body>
+        {{> nav}}
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-sm-7 mx-auto">
+                    <div class="card card-body text-center bg-light ">
+                        <h1 calss="text-white">Feedback</h1>
+                        {{#if message}}
+                        <h4 class="alert alert-danger mt-2 text-center">{{message}}</h4>
+                        {{/if}}
+                        <form action="/feedback" method="POST">
+                            <div class="form-group mt-3">
+                                <div class="input-group">
+                                    <input type="text" placeholder="NAME" name="fname" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group mt-3">
+                                <div class="input-group">
+                                    <input type="email" placeholder="EMAIL" name="femail" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group mt-3">
+                                <div class="input-group">
+                                    <input type="text" placeholder="Review" name="freview" class="form-control">
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-success  mt-2 pt-2">Submit</button>
+                        </form>
+                        <h5 class="mt-3">Don't have an account.....?</h5><a href="/signup">SignUp</a>
+                    </div>
+                    <table class="table table-hover mt-5 ml-2  table-bordered">
+                        <thead class="thead-light text-center">
+                            <tr>
+                                <th> id</th>
+                                <th>name</th>
+                                <th>email</th>
+                                <th>Review</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-center">
+                            {{#each userData}}
+                            <tr>
+                                <td>{{id}}</td>
+                                <td>{{name}}</td>
+                                <td>{{email}}</td>
+                                <td>{{review}}</td>
+
+                            </tr>
+                            {{/each}}
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+        {{> footer}}
+
+    </body>
+
+</html>
